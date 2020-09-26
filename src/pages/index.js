@@ -22,7 +22,7 @@ export default ({ data }) => {
         />
         {unemployed && (
           <p className="mt-2">
-            <b> Hey! I am looking for new opportunities :)</b>
+            <b>Microft Dynamics 365 Consultant, Technical Consultant, Architect</b>
           </p>
         )}
         <Container className="py-0 my-0">
