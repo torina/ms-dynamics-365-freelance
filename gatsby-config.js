@@ -7,13 +7,13 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `John Doe`,
-    author: `John Doe`,
+    title: `Anton Bibikov`,
+    author: `Anton Bibikov`,
     firstName: `Anton`,
     lastName: `Bibikov`,
-    description: `John Doe's personal site`,
+    description: `Dynamics 365 Freelancer Anton Bibikov`,
     occupation: `Microsoft Dynamics 365 Consultant`,
-    keywords: [`John`, `Doe`, `Personal`, `Blog`, `Resume`, `Projects`, `Work`],
+    keywords: [`D365`, `Dynamics365`, `Architect`, `Freelancer`, `Consultant`, `FinOps`, `Germany`],
     siteUrl:
       process.env.URL || process.env.DEPLOY_URL || `http://localhost:8000`,
     unemployed: true,
@@ -75,9 +75,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `John Doe's Personal Site`,
-        short_name: `J.Doe`,
-        description: `This is my personal site.`,
+        name: `Dynamics 365 Freelancer Munich Anton Bibikov`,
+        short_name: `D365 Freelancer`,
+        description: `Dynamics 365 Freelancer Munich Anton Bibikov`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#fff`,
