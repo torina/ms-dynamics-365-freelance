@@ -20,7 +20,7 @@ export default ({ data }) => {
     readingList,
     showsList,
     designations,
-    unemployed,
+    unemployed
   } = data.site.siteMetadata
   const { toString } = useContext(ThemeContext)
 

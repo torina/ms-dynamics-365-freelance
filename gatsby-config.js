@@ -57,6 +57,18 @@ module.exports = {
         link: `https://www.imdb.com/title/tt0458290/`,
       },
     ],
+
+    qualifications: [ 'Dynamics 365 Finance',
+      'Dynamics 365 Supply Chain Management',
+      'Dynamics 365 Human Resources',
+      'Dynamics 365 Commerse',
+      'Dynamics 365 Project Service Automation',
+      'Dynamics 365 Customer Engagement',
+      'Azure DevOps',
+      '.NET Development',
+      'Project Management', 
+      'Trainings'
+    ],
   },
   plugins: [
     `gatsby-plugin-preload-link-crossorigin`,
