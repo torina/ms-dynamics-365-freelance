@@ -5,10 +5,11 @@ import { PageLayout } from "../components"
 import { SEO } from "../utils"
 import { Container, Image } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import CookieConsent from 'react-cookie-consent';
 
 export default ({ data }) => {
   const { unemployed, firstName, lastName, qualifications } = data.site.siteMetadata
-  const { dark } = useContext(ThemeContext)
+  // const { dark } = useContext(ThemeContext)
 
   return (
     <PageLayout>
@@ -40,7 +41,7 @@ export default ({ data }) => {
 
             {qualifications.map((attr, i) => (
               <span key={attr}>
-                &nbsp;<li style={{listStyle: "none"}}>{attr}</li>&nbsp;
+                &nbsp;<li style={{ listStyle: "none" }}>{attr}</li>&nbsp;
                 {/* {i < qualifications.length - 1 && <></>} */}
               </span>
             ))}
@@ -75,6 +76,16 @@ export default ({ data }) => {
             />
           </a>
         </div>
+        {/* <CookieConsent
+          location="bottom"
+          buttonText="OK"
+          // cookieName="myAwesomeCookieName2"
+          style={{ background: "#2B373B" }}
+          buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+          expires={150}
+        ><span style={{color: "#000000" }}>
+          Ich akzeptiere.{" "}</span>
+        </CookieConsent> */}
       </Container>
     </PageLayout>
   )
