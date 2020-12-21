@@ -1,11 +1,11 @@
-import React, { useContext } from "react"
+import React from "react"
 import { graphql } from "gatsby"
-import ThemeContext from "../utils/theme"
+// import ThemeContext from "../utils/theme"
 import { PageLayout } from "../components"
 import { SEO } from "../utils"
 import { Container, Image } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import CookieConsent from 'react-cookie-consent';
+// import CookieConsent from 'react-cookie-consent';
 
 export default ({ data }) => {
   const { unemployed, firstName, lastName, qualifications } = data.site.siteMetadata
@@ -14,43 +14,47 @@ export default ({ data }) => {
   return (
     <PageLayout>
       <SEO title="Dynamics 365 Freelancer" />
-      <Container className="text-center pt-5 mt-5" fluid>
+      <Container className="text-center" fluid>
         <Image
-          width="150"
-          height="150"
+          width="120"
+          height="130"
           fluid
           src={`../../icons/anton.jpeg`}
           alt={"Dynamics 365 Freelancer Anton Bibikov"}
         />
         {unemployed && (
-          <p className="mt-2">
-            <b>Microsoft Dynamics 365 Consultant, Technical Consultant, Architect </b>
+          <p className="mt-2" style={{ fontSize: "18px", fontWeight: "bold" }} >
+            <span>{firstName}</span>&nbsp;
+            <span>{lastName}</span>
           </p>
         )}
         <Container className="py-0 my-0">
           <h1
             style={{
-              fontSize: "36px",
-              color: "black",
+              fontSize: "19px",
+              color: "black"
             }}
           >
-            <span >{firstName}</span>&nbsp;
-            <span>{lastName}</span>
+            <b>Microsoft Dynamics 365 Consultant, Technical Consultant, Architect</b>
           </h1>
           <p>
-
+            <div className="titleblue">Services: </div>
             {qualifications.map((attr, i) => (
-              <span key={attr}>
-                &nbsp;<li style={{ listStyle: "none" }}>{attr}</li>&nbsp;
+              <span key={attr} className="maintext ">
+                &nbsp;<li>{attr}</li>&nbsp;
                 {/* {i < qualifications.length - 1 && <></>} */}
               </span>
             ))}
-            {/* <i>
-              {occupation} by day,&nbsp;
-              {dark ? `Imperial enforcer by night` : `Rebel scum by night`}
-            </i> */}
+            <div className="titleblue" style={{ paddingTop: "5px" }}>Location: </div>
+            <div className="maintext" style={{ paddingTop: "13px" }}>Munich, Germany</div>
+            <br></br>
           </p>
+
+
         </Container>
+
+
+
         <hr className="my-3 w-25" />
         <div className="d-md-inline-flex icons-container">
           <a
